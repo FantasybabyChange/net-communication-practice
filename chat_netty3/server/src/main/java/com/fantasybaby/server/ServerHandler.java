@@ -33,6 +33,7 @@ public class ServerHandler extends SimpleChannelHandler {
 		Request request = (Request)e.getMessage();
 	
 		handlerMessage(new SessionImpl(ctx.getChannel()), request);
+		System.out.println("Thread Name:"+Thread.currentThread().getName());
 	}
 	
 	

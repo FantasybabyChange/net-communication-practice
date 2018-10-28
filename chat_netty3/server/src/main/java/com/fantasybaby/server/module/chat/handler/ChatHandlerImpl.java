@@ -19,6 +19,12 @@ public class ChatHandlerImpl implements ChatHandler{
 
 	@Override
 	public Result<?> publicChat(long playerId, byte[] data) {
+		System.out.println(" ChatHandlerImplThread Name:"+Thread.currentThread().getName());
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		try {
 			//反序列化
 			PublicChatRequest request = new PublicChatRequest();

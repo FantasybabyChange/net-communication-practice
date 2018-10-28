@@ -30,7 +30,7 @@ public class Server {
 		
 		//boss线程监听端口，worker线程负责数据读写
 		ExecutorService boss = Executors.newCachedThreadPool();
-		ExecutorService worker = Executors.newCachedThreadPool();
+		ExecutorService worker = Executors.newFixedThreadPool(1);
 		
 		//设置niosocket工厂
 		bootstrap.setFactory(new NioServerSocketChannelFactory(boss, worker));
