@@ -38,7 +38,7 @@ public class ServerHandler extends SimpleChannelHandler {
 	
 	/**
 	 * 消息处理
-	 * @param channelId
+	 * @param session
 	 * @param request
 	 */
 	private void handlerMessage(Session session, Request request){
