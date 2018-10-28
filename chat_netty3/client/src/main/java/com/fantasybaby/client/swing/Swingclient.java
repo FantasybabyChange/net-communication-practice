@@ -202,7 +202,7 @@ public class Swingclient extends JFrame implements ActionListener {
 			try {
 				LoginRequest loginRequest = new LoginRequest();
 				loginRequest.setPlayerName(playerName.getText());
-				loginRequest.setPassward(passward.getText());
+				loginRequest.setPassword(passward.getText());
 				
 				//构建请求
 				Request request = Request.valueOf(ModuleId.PLAYER, PlayerCmd.LOGIN, loginRequest.getBytes());
@@ -216,7 +216,7 @@ public class Swingclient extends JFrame implements ActionListener {
 			try {
 				RegisterRequest registerRequest = new RegisterRequest();
 				registerRequest.setPlayerName(playerName.getText());
-				registerRequest.setPassward(passward.getText());
+				registerRequest.setPassword(passward.getText());
 				
 				//构建请求
 				Request request = Request.valueOf(ModuleId.PLAYER, PlayerCmd.REGISTER_AND_LOGIN, registerRequest.getBytes());

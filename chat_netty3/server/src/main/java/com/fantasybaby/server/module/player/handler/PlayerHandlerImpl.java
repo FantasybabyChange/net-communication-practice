@@ -34,12 +34,12 @@ public class PlayerHandlerImpl implements PlayerHandler{
 			registerRequest.readFromBytes(data);
 			
 			//参数判空
-			if(StringUtils.isEmpty(registerRequest.getPlayerName()) || StringUtils.isEmpty(registerRequest.getPassward())){
+			if(StringUtils.isEmpty(registerRequest.getPlayerName()) || StringUtils.isEmpty(registerRequest.getPassword())){
 				return Result.ERROR(ResultCode.PLAYERNAME_NULL);
 			}
 			
 			//执行业务
-			result = playerService.registerAndLogin(session, registerRequest.getPlayerName(), registerRequest.getPassward());
+			result = playerService.registerAndLogin(session, registerRequest.getPlayerName(), registerRequest.getPassword());
 		} catch (ErrorCodeException e) {
 			return Result.ERROR(e.getErrorCode());
 		} catch (Exception e) {
@@ -58,12 +58,12 @@ public class PlayerHandlerImpl implements PlayerHandler{
 			loginRequest.readFromBytes(data);
 			
 			//参数判空
-			if(StringUtils.isEmpty(loginRequest.getPlayerName()) || StringUtils.isEmpty(loginRequest.getPassward())){
+			if(StringUtils.isEmpty(loginRequest.getPlayerName()) || StringUtils.isEmpty(loginRequest.getPassword())){
 				return Result.ERROR(ResultCode.PLAYERNAME_NULL);
 			}
 			
 			//执行业务
-			result = playerService.login(session, loginRequest.getPlayerName(), loginRequest.getPassward());
+			result = playerService.login(session, loginRequest.getPlayerName(), loginRequest.getPassword());
 		} catch (ErrorCodeException e) {
 			return Result.ERROR(e.getErrorCode());
 		} catch (Exception e) {
