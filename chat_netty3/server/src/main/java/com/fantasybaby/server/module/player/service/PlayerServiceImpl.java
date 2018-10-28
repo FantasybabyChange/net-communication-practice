@@ -34,7 +34,7 @@ public class PlayerServiceImpl implements PlayerService {
 		// 创建新帐号
 		Player player = new Player();
 		player.setPlayerName(playerName);
-		player.setPassward(passward);
+		player.setPassword(passward);
 		player = playerDao.createPlayer(player);
 
 		//顺便登录
@@ -56,7 +56,7 @@ public class PlayerServiceImpl implements PlayerService {
 		}
 
 		// 密码错误
-		if (!player.getPassward().equals(passward)) {
+		if (!player.getPassword().equals(passward)) {
 			throw new ErrorCodeException(ResultCode.PASSWARD_ERROR);
 		}
 

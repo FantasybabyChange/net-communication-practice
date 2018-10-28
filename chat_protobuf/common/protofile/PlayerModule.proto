@@ -4,13 +4,13 @@ option java_outer_classname = "PlayerModule" ;
 //登录请求
 message LoginRequest{
 	required string playerName = 1 ;
-	required string passward = 2;
+	required string password = 2;
 }
 
 //注册请求
 message RegisterRequest{
 	required string playerName = 1 ;
-	required string passward = 2;
+	required string password = 2;
 }
 
 //玩家信息
