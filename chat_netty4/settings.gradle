@@ -1,0 +1,8 @@
+rootProject.name = 'netty4_parent'
+include ':common'
+include ':client'
+include ':server'
+
+project(':common').projectDir = "$rootDir/common" as File
+project(':client').projectDir = "$rootDir/client" as File
+project(':server').projectDir = "$rootDir/server" as File

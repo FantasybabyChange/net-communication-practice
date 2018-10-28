@@ -1,0 +1,6 @@
+
+description = 'common'
+dependencies {
+    compile group: 'io.netty', name: 'netty-all', version:'4.0.34.Final'
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version:'2.4.1'
+}
