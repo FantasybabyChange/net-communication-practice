@@ -1,0 +1,11 @@
+.*
+daliy_test/.*
+*/*.iml
+*/*/*.iml
+target
+*/build/*
+*/*/build/*
+*/out/*
+*/gradle
+*.log
+*/*.log
