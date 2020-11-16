@@ -21,9 +21,10 @@ from sourceSets.main.allSource
 artifacts.archives packageSources
   repositories {
     mavenLocal()
-    
-    maven { url "http://localhost:8081/nexus/content/groups/public/" }
-    maven { url "http://repo.maven.apache.org/maven2" }
+    mavenCentral()
+    jcenter()
+//    maven { url "http://localhost:8081/nexus/content/groups/public/" }
+//    maven { url "http://repo.maven.apache.org/maven2" }
   }
 
   
